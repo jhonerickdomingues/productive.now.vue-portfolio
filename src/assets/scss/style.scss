@@ -1,0 +1,60 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+@import '~vue-loading-overlay/dist/vue-loading.css';
+@import "~vue-select/src/scss/vue-select.scss";
+@import '../../@core/scss/base/bootstrap-extended/variables';
+
+.v-select {
+  background-color: white;
+}
+
+.dark-layout {
+
+  .v-select .vs__search::placeholder,
+  .v-select .vs__dropdown-toggle,
+  .v-select .vs__dropdown-menu {
+    background: rgb(40, 48, 70);
+    border-color: #404656;
+  }
+  .v-select .vs__selected {
+    color: #fff;
+  }
+
+  .v-select .vs__dropdown-menu * {
+    color: #fff !important;
+  }
+
+  .v-select .vs__clear,
+  .v-select .vs__open-indicator {
+    fill: #fff;
+  }
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;  /* iPhone OS, Safari */
+  -webkit-user-select: none;    /* Chrome, Safari 3 */
+  -khtml-user-select: none;     /* Safari 2 */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* IE10+ */
+  user-select: none;            /* Possível implementação no futuro */
+  /* cursor: default; */
+}
+
+*::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $secondary;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  border: 1px solid $secondary;  /* creates padding around scroll thumb */
+}
